@@ -1,0 +1,6 @@
+2		!metodo de evaluacion 1-diferencias centradas 2-formula exacta
+5		!funcion de onda a usar 1-funcion 1,2-funcion 2,3-funcion 3,4-funcion 4,5-funcion 1 con jastrow,6-combinacion
+100000	        !mc run
+2.4,3,0.1	!jastro inicial,final,pasos 
+1.1,1.5,0.1	!alfa inicial,final,pasos
+0.69,0.74,0.01	!distancia inicial,final,pasos
