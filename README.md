@@ -100,10 +100,11 @@ To avoid this divergence that occurs when the electron densities overlap  a corr
 This Jastrow term behaves asymptotically as follows:
 If the distance between electrons tends to 0, the term tends to some finite value. On the other hand, if the distance between the electrons becomes infinite the term tends to 1 and has no effect on the wave function of the system. Therefore, the wave function will have the following form where F will be a variational parameter.
 <p align="center">
-<img width="120" height="40" src="https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5CPsi%28r_%7B1%7D%2Cr_%7B2%7D%29%3D%5Cphi_%7B1%7D%5Cphi_%7Bj%7D">
+<img width="100" height="20" src="https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5CPsi%28r_%7B1%7D%2Cr_%7B2%7D%29%3D%5Cphi_%7B1%7D%5Cphi_%7Bj%7D">
 </p>
 Another wave function can be proposed for the study of the hydrogen molecule by taking the functions and proposing a linear combination of them of the form:
 <p align="center">
-<img width="120" height="40" src="https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5CPsi%28r_%7B1%7D%2Cr_%7B2%7D%29%3D%5Cphi_%7B1%7D&plus;%5Clambda%5Cphi_%7B2%7D">
+<img width="120" height="20" src="https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5CPsi%28r_%7B1%7D%2Cr_%7B2%7D%29%3D%5Cphi_%7B1%7D&plus;%5Clambda%5Cphi_%7B2%7D">
+  
 With a variational parameter λ.
 </p>
