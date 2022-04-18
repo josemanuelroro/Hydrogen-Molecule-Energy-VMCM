@@ -108,5 +108,7 @@ Another wave function can be proposed for the study of the hydrogen molecule by 
   
 With a variational parameter λ.
 </p>
+
 ## Kinetic Terms
+
 Calculation of kinetic terms. When calculating the kinetic terms of the hamiltonian present in the laplacians we encounter a difficulty and that is that we must evaluate a double derivative of a product of exponential functions making the calculation tedious. The demonstration of the calculation of these terms in an analytical way will not be done here, the results can be consulted in the bibliography[9]. The main program also includes a function to calculate these terms numerically using centered differences, so you can check that the analytical forms are correct.
