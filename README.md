@@ -53,7 +53,7 @@ Atomic units will be used.
 The Variational Method allows us to establish a bound on the energy of the fundamental state using test functions that depend on some variational parameters that we then minimize to make the energy a minimum. It tells us that the mean value of the Hamiltonian using a certain test wave function is greater than or equal to the ground state energy [6].
 
 <p align="center">
-<img width="100" height="50" src="https://latex.codecogs.com/gif.latex?E%5B%5CPsi%5D%3D%5Cfrac%7B%5Cint%20%5CPsi%5E%7B*%7D%5Cwidehat%7BH%7D%5CPsi%20dr%7D%7B%5Cint%20%5CPsi%5E%7B*%7D%5CPsi%20dr%7D%5Cgeq%20E_%7B0%7D">
+<img width="150" height="50" src="https://latex.codecogs.com/gif.latex?E%5B%5CPsi%5D%3D%5Cfrac%7B%5Cint%20%5CPsi%5E%7B*%7D%5Cwidehat%7BH%7D%5CPsi%20dr%7D%7B%5Cint%20%5CPsi%5E%7B*%7D%5CPsi%20dr%7D%5Cgeq%20E_%7B0%7D">
 </p>
 
 If 𝛹(𝑟) depends on the variational parameter 𝛼 the energy will also depend on 𝛼 so we can vary this parameter to minimize the energy value.
@@ -62,7 +62,7 @@ Physically, the probabilities of finding a particle at a point in space are very
 We can rewrite equation (2) as:
 
 <p align="center">
-<img width="100" height="40" src="https://latex.codecogs.com/gif.latex?E_%7BL%7D%3D%5Cfrac%7B%5Cwidehat%7BH%7D%5CPsi%7D%7B%5CPsi%7D">
+<img width="50" height="40" src="https://latex.codecogs.com/gif.latex?E_%7BL%7D%3D%5Cfrac%7B%5Cwidehat%7BH%7D%5CPsi%7D%7B%5CPsi%7D">
 </p>
 
 Because this method provides us with a discretization of the samples. This being the local energy, which only depends on the positions of the particles. This is the energy of each Monte Carlo simulation. The total energy of the system will be [8]:
@@ -108,3 +108,5 @@ Another wave function can be proposed for the study of the hydrogen molecule by 
   
 With a variational parameter λ.
 </p>
+## Kinetic Terms
+Calculation of kinetic terms. When calculating the kinetic terms of the hamiltonian present in the laplacians we encounter a difficulty and that is that we must evaluate a double derivative of a product of exponential functions making the calculation tedious. The demonstration of the calculation of these terms in an analytical way will not be done here, the results can be consulted in the bibliography[9]. The main program also includes a function to calculate these terms numerically using centered differences, so you can check that the analytical forms are correct.
