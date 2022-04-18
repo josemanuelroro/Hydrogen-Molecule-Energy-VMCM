@@ -79,16 +79,16 @@ We will use wave functions that are combinations of hydrogenoids:
 </p>
 Taking into account the total antisymmetry that the wave function must present. We arrive at the following wave functions
 <p align="center">
-<img width="500" height="40" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B1%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29&plus;%5Cpsi%28r_%7B1%7D-R%29%5D%5B%5Cpsi%28r_%7B2%7D%29&plus;%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
+<img width="500" height="25" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B1%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29&plus;%5Cpsi%28r_%7B1%7D-R%29%5D%5B%5Cpsi%28r_%7B2%7D%29&plus;%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
 </p>
 <p align="center">
-<img width="500" height="40" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B2%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29-%5Cpsi%28r_%7B1%7D-R%29%5D%5B%5Cpsi%28r_%7B2%7D%29-%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
+<img width="500" height="25" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B2%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29-%5Cpsi%28r_%7B1%7D-R%29%5D%5B%5Cpsi%28r_%7B2%7D%29-%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
 </p>
 <p align="center">
-<img width="500" height="40" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B3%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29%5Cpsi%28r_%7B2%7D%29-%5Cpsi%28r_%7B1%7D-R%29%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
+<img width="500" height="25" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B3%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B%5Cpsi%28r_%7B1%7D%29%5Cpsi%28r_%7B2%7D%29-%5Cpsi%28r_%7B1%7D-R%29%5Cpsi%28r_%7B2%7D-R%29%5D%7C00%3E">
 </p>
 <p align="center">
-<img width="500" height="40" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B4%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B-%5Cpsi%28r_%7B1%7D%29%5Cpsi%28r_%7B2%7D-R%29-%5Cpsi%28r_%7B1%7D-R%29%5Cpsi%28r_%7B2%7D%29%5D%7C1MS%3E">
+<img width="500" height="25" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B4%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B-%5Cpsi%28r_%7B1%7D%29%5Cpsi%28r_%7B2%7D-R%29-%5Cpsi%28r_%7B1%7D-R%29%5Cpsi%28r_%7B2%7D%29%5D%7C1MS%3E">
 </p>
 
 The wave functions seen above do not take into account the electronic repulsion of the hamiltonian. We have a 1/|𝑟1-𝑟2| term which is affected by the distance between the two electrons, electron density clouds are generated around the nuclei and unless the
