@@ -90,7 +90,7 @@ Taking into account the total antisymmetry that the wave function must present. 
 <p align="center">
 <img width="300" height="25" src="https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cphi_%7B4%7D%3D%5Cfrac%7B1%7D%7B2%7D%5B-%5Cpsi%28r_%7B1%7D%29%5Cpsi%28r_%7B2%7D-R%29-%5Cpsi%28r_%7B1%7D-R%29%5Cpsi%28r_%7B2%7D%29%5D%7C1MS%3E">
 </p>
-
+These functions are called MO-LCAO
 The wave functions seen above do not take into account the electronic repulsion of the hamiltonian. We have a 1/|𝑟1-𝑟2| term which is affected by the distance between the two electrons, electron density clouds are generated around the nuclei and unless the
 distance of the nuclei is high, these densities can overlap causing the positions of the electrons to be very close causing the distance between them to tend to 0. If this distance tends to 0, a divergence occurs in the 1/|𝑟1-𝑟2| term of the Hamiltonian.
 To avoid this divergence that occurs when the electron densities overlap  a correlation function called Padé-Jastrow function is introduced by [9][10]
@@ -112,3 +112,87 @@ With a variational parameter λ.
 ## Kinetic Terms
 
 Calculation of kinetic terms. When calculating the kinetic terms of the hamiltonian present in the laplacians we encounter a difficulty and that is that we must evaluate a double derivative of a product of exponential functions making the calculation tedious. The demonstration of the calculation of these terms in an analytical way will not be done here, the results can be consulted in the bibliography[9]. The main program also includes a function to calculate these terms numerically using centered differences, so you can check that the analytical forms are correct.
+
+## Implementation
+
+The main program H2.f90 consists of two functions, the first one contains the functions to be calculated  and the other one contains the developments of the Laplacians seen previously . Each variational parameter will be stored in an array that will be traversed and calculating the energy for each combination of them. A way to calculate the Laplacians using the centered difference method is also added.
+For the generation of random numbers the Mersenne Twister, mt19937.f90, will be used to generate the random numbers needed for the Monte Carlo.
+The program needs to know which wave function to use, the method for calculating the Laplacians, the number of Monte Carlo runs and the variational parameters. These data are entered into the program as a .txt file. An example of the file is shown below.
+
+---
+
+1 !evaluation method 1-central difference 2-exact laplacians  
+4 !Wave function 1-function 1,2-function 2,3-function 3,
+¡4-function 4, 5-function 1 with jastrow,6-combination  
+100000 !iterations MC  
+2.4,3,0.1 !jastro(F) initial,final,step size  
+1.1,1.5,0.1 !a initial,final,step size  
+0.69,0.74,0.01 !distance(R) initial,final,step size   
+
+---
+
+The program will display on the screen all the variational parameters and the distance at which the minimum energy value is reached next to it. In addition, the execution time will be displayed. Commenting or uncommenting the different .txt files will save different data in .txt files that we can later use for the visualization of the results.
+
+## Results
+
+
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/figura1.svg">
+</p>
+
+Figure shows the energy results for different values of 𝑅. It shows how the wave functions 𝜙2 and 𝜙4 do not have an energy minimum. However, the function corresponding to wave function 𝜙3 does show a minimum energy value, but this function does not present a bound state.
+
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/fundamental,sinjastrow.svg">
+</p>
+
+Figure shows the minimum energy value obtained for the 𝜙1 function, this wave function is the one corresponding to the fundamental state of the hydrogen molecule. The literature values of the hydrogen molecule are 𝐸=-4.75 𝑒𝑉 [1] and 𝑅=0.7411 Å [2] we see that for the MO-LCAO function we still obtain values of the energy far from those obtained experimentally.
+
+---
+
+𝑎 1.2 Distance (Å) 0.7 Energíy (eV) -3.4827
+
+---
+Let us now see what happens when we add the Jastrow term to the wave function to account for the electronic repulsion.
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/figura2.svg">
+</p>
+We see that the inclusion of the Jastrow term in the ground state wave function shows more accurate values of the energy.
+
+---
+F 3.0 𝑎 1.3 Distance (Å) 0.74 Energy (eV) -4.3910353
+
+---
+
+Finally, let's look at the values obtained for energy using the linear combination of functions.
+
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/figura3.svg">
+</p>
+
+---
+λ -0.6 𝑎 1.2 Distance (Å) 0.75 Energy (eV) -4.0242326
+
+---
+
+With this wave function we obtain more accurate values than those obtained with the ground state wave function. But we still do not get as accurate results compared to the wave function that includes the Jastrow term.
+
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/orbitales_todos.svg">
+</p>
+This figure shows the shape of the electron probability density for each of the MO-LCAO wave functions, using the variational parameters seen above and at a fixed distance of 0.74 which corresponds to the equilibrium distance.
+We clearly see the bond formation in the ground state function.
+
+<p align="center">
+<img width="460" height="300" src="https://github.com/josemanuelroro/h2/blob/main/orbitales.svg">
+</p>
+
+Finally, this last figure shows how the electron cloud is modified when we vary the distance R. We can see that for the equilibrium distance we obtain the bond that is formed before and the higher we make R we can see how 2 spherical clouds are formed around each nucleus, this is due to the hydrogenoids that we use in the wave functions.
+
+## Conclusions
+
+- The Variational Monte Carlo Method allows obtaining values of the energy close to those obtained experimentally.
+- The choice of the wave function plays a crucial role in the accuracy of the results obtained. The MO-LCAO wave functions show accurate results.
+- The inclusion of the Jastrow term in the wave function increases the accuracy of the results by taking into consideration the electronic repulsion present in the Hamiltonian.
+- The use of the Born-Oppenheimer approximation allows simplifying the study of the hydrogen molecule without a significant loss of accuracy.
+
